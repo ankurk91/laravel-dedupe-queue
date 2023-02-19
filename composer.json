@@ -1,0 +1,59 @@
+{
+  "name": "ankurk91/laravel-dedupe-queue",
+  "description": "Prevent duplicate jobs from running in Laravel php framework",
+  "keywords": [
+    "laravel",
+    "sqs",
+    "job",
+    "deduplication",
+    "unique",
+    "idempotent"
+  ],
+  "homepage": "https://github.com/ankurk91/laravel-dedupe-queue",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "ankurk91",
+      "homepage": "https://ankurk91.github.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "illuminate/bus": "^9.34 || ^10.0",
+    "illuminate/cache": "^9.34 || ^10.0",
+    "illuminate/log": "^9.34 || ^10.0",
+    "illuminate/support": "^9.34 || ^10.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^7.12 || ^8.0",
+    "phpunit/phpunit": "^9.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "Ankurk91\\DedupeQueue\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Ankurk91\\DedupeQueue\\Tests\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist"
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test:coverage": "vendor/bin/phpunit --coverage-clover=coverage.xml"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Ankurk91\\DedupeQueue\\DedupeQueueServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
