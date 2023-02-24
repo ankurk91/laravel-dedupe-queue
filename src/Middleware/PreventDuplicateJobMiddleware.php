@@ -40,12 +40,13 @@ class PreventDuplicateJobMiddleware
         /** @var JobContract $job */
         $job = $task->job;
 
-        Log::info(sprintf("Skip processing a duplicate job: %s",
-            $job->uuid(),
-        ), [
-            'name'=> $job->getName(),
-            'connection' => $job->getConnectionName(),
-            'queue' => $job->getQueue(),
-        ]);
+        Log::info("Skip processing a duplicate job",
+            [
+                'uuid' => $job->uuid(),
+                'name' => $job->resolveName(),
+                'connection' => $job->getConnectionName(),
+                'queue' => $job->getQueue(),
+            ]
+        );
     }
 }
