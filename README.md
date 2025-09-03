@@ -9,8 +9,9 @@
 
 Prevent duplicate jobs in Laravel php framework.
 
-### Annoucement https://laravel.com/docs/12.x/queues#sqs-fifo-and-fair-queues
-Laravel finally shipped with this feature in v12.27.0, [read more](https://laravel.com/docs/12.x/queues#sqs-fifo-and-fair-queues)|
+### Annoucement 
+
+:mega: Laravel finally shipped with this feature in v12.27.0, [read more](https://laravel.com/docs/12.x/queues#sqs-fifo-and-fair-queues)
 
 > **Warning**
 > This package is in its early stage and may have some edge case left.
